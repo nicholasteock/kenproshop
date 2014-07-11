@@ -1,48 +1,23 @@
 // HANDLEBARS HELPERS
 
 /******************************************************************************
-// Photo Gallery Helper
+ Products List Helper
 ******************************************************************************/
 
-Handlebars.registerHelper( 'galleryList', function(galleryObject, options) {
+Handlebars.registerHelper( 'productsList', function(productsObject, options) {
 	var output = "";
 
-	for( var i=0, iLen=galleryObject.length; i<iLen; i++ ) {
-		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + galleryObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
+	for( var i=0, iLen=productsObject.length; i<iLen; i++ ) {
+		var brandHtml = '<div class="panel panel-products"><div class="panel-heading"><img class="center-block logo" src="' + productsObject[i].brandImage + '" alt="' + productsObject[i].brand + '"></div><div class="panel-body"><ul class="list-group">';
 
-		for( var j=0, jLen=galleryObject[i].items.length; j<jLen; j++ ) {
-			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + galleryObject[i].items[j].image + '" data-lightbox="gallery' + galleryObject[i].year + '" data-title="<h3>' + galleryObject[i].items[j].date + '</h3><hr>'+ galleryObject[i].items[j].description +'">\
-							<img class="photo" src="' + galleryObject[i].items[j].image + '">\
-						</a>';
-		}
 
-		yearHtml +=	'</div></div></div>';
-
-		output += yearHtml;
-	}
-
-	return output;
-});
-
-/******************************************************************************
-// Hall Of Fame Helper
-******************************************************************************/
-
-Handlebars.registerHelper( 'hallOfFameList', function(hallOfFameObject, options) {
-	var output = "";
-
-	for( var i=0, iLen=hallOfFameObject.length; i<iLen; i++ ) {
-		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + hallOfFameObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
-
-		for( var j=0, jLen=hallOfFameObject[i].items.length; j<jLen; j++ ) {
-			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + hallOfFameObject[i].items[j].image + '" data-lightbox="gallery' + hallOfFameObject[i].year + '" data-title="<h3>' + hallOfFameObject[i].items[j].descriptionTitle + '</h3><hr>'+ hallOfFameObject[i].items[j].description +'">\
-							<img class="photo" src="' + hallOfFameObject[i].items[j].image + '">\
-						</a>';
+		for( var j=0, jLen=productsObject[i].items.length; j<jLen; j++ ) {
+			brandHtml += "<li class='list-group-item'><img class='photo center-block' src='" + productsObject[i].items[j].image + "'><div class='text-center'>" + productsObject[i].items[j].description + "</div></li>";
 		}
 									
-		yearHtml +=	'</div></div></div>';
+		brandHtml += '</ul></div></div>';
 
-		output += yearHtml;
+		output += brandHtml;
 	}
 
 	return output;
@@ -151,6 +126,54 @@ Handlebars.registerHelper( 'eventsList', function(eventsObject, options) {
 						</div>\
 					</a>\
 				</div>';
+	}
+
+	return output;
+});
+
+/******************************************************************************
+// Hall Of Fame Helper
+******************************************************************************/
+
+Handlebars.registerHelper( 'hallOfFameList', function(hallOfFameObject, options) {
+	var output = "";
+
+	for( var i=0, iLen=hallOfFameObject.length; i<iLen; i++ ) {
+		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + hallOfFameObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
+
+		for( var j=0, jLen=hallOfFameObject[i].items.length; j<jLen; j++ ) {
+			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + hallOfFameObject[i].items[j].image + '" data-lightbox="gallery' + hallOfFameObject[i].year + '" data-title="<h3>' + hallOfFameObject[i].items[j].descriptionTitle + '</h3><hr>'+ hallOfFameObject[i].items[j].description +'">\
+							<img class="photo" src="' + hallOfFameObject[i].items[j].image + '">\
+						</a>';
+		}
+									
+		yearHtml +=	'</div></div></div>';
+
+		output += yearHtml;
+	}
+
+	return output;
+});
+
+/******************************************************************************
+// Photo Gallery Helper
+******************************************************************************/
+
+Handlebars.registerHelper( 'galleryList', function(galleryObject, options) {
+	var output = "";
+
+	for( var i=0, iLen=galleryObject.length; i<iLen; i++ ) {
+		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + galleryObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
+
+		for( var j=0, jLen=galleryObject[i].items.length; j<jLen; j++ ) {
+			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + galleryObject[i].items[j].image + '" data-lightbox="gallery' + galleryObject[i].year + '" data-title="<h3>' + galleryObject[i].items[j].date + '</h3><hr>'+ galleryObject[i].items[j].description +'">\
+							<img class="photo" src="' + galleryObject[i].items[j].image + '">\
+						</a>';
+		}
+
+		yearHtml +=	'</div></div></div>';
+
+		output += yearHtml;
 	}
 
 	return output;

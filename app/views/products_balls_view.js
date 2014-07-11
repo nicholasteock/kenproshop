@@ -1,14 +1,18 @@
 var View     = require('./view'),
-	template = require('./templates/products_balls');
+	template = require('./templates/products_balls'),
+	data 	 = require('./data/products_balls');
 
 var afterRender = function() {
-	console.log("RENDERED PRODUCTS BALLS VIEW");
 	Application.updateBreadcrumb('products-balls');
 };
 
-module.exports = View.extend({
-    className: 'products-balls-view',
-    template: template,
+var getRenderData = function() {
+	return data;
+};
 
-    afterRender: afterRender
+module.exports = View.extend({
+    className 		: 'products-balls-view',
+    template 		: template,
+    getRenderData 	: getRenderData,
+    afterRender 	: afterRender
 });
