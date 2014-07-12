@@ -12,7 +12,7 @@ Handlebars.registerHelper( 'productsList', function(productsObject, options) {
 
 
 		for( var j=0, jLen=productsObject[i].items.length; j<jLen; j++ ) {
-			brandHtml += "<li class='list-group-item'><img class='photo center-block' src='" + productsObject[i].items[j].image + "'><div class='text-center'>" + productsObject[i].items[j].description + "</div></li>";
+			brandHtml += "<li class='col-xs-12 col-md-4 list-group-item'><img class='photo center-block' src='" + productsObject[i].items[j].image + "'><div class='text-center'>" + productsObject[i].items[j].description + "</div></li>";
 		}
 									
 		brandHtml += '</ul></div></div>';

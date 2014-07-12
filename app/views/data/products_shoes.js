@@ -17,7 +17,7 @@ module.exports = {
 		},
 		{	
 			"brand"				: "Dexter",
-			"brandImage" 		: "img/brands/dexter.gif",
+			"brandImage" 		: "img/brands/dexter.jpg",
 			"items" 			: [
 				{
 					"image" : "img/shoes/stormlightning.gif",

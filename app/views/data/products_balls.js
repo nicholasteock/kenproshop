@@ -3,7 +3,7 @@ module.exports = {
 	"balls": [
 		{	
 			"brand"				: "Ebonite",
-			"brandImage" 		: "img/brands/ebonite.png",
+			"brandImage" 		: "img/brands/ebonite.jpg",
 			"items" 			: [
 				{
 					"image" : "img/balls/ebonitechampion.jpeg",
