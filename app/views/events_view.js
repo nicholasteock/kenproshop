@@ -12,7 +12,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'events-view',
+    className 		: 'container events-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

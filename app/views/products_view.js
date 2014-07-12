@@ -7,7 +7,7 @@ var afterRender = function() {
 };
 
 module.exports = View.extend({
-    className: 'products-view',
+    className: 'container products-view',
     template: template,
 
     afterRender: afterRender

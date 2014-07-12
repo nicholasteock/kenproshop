@@ -11,7 +11,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'hall-of-fame-view',
+    className 		: 'container hall-of-fame-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

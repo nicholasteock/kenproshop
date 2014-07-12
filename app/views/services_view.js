@@ -11,7 +11,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'services-view',
+    className 		: 'container services-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

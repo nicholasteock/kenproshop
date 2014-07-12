@@ -11,7 +11,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'contact-view',
+    className 		: 'container contact-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

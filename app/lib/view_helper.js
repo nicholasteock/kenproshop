@@ -32,12 +32,12 @@ Handlebars.registerHelper( 'servicesList', function(servicesObject, options) {
 
 	for( var i=0, iLen=servicesObject.length; i<iLen; i++ ) {
 		var dataToggleName = "collapseServices" + i;
-		output += '<div class="panel panel-custom">\
+		output += '<div class="col-xs-12 col-md-4"><div class="panel panel-custom">\
 					<div class="panel-heading">\
 						<div class="title text-center">' + servicesObject[i].title + '</div>\
 					</div>\
 					<div class="panel-body">\
-						<img class="photo" src="' + servicesObject[i].image + '">\
+						<img class="center-block photo" src="' + servicesObject[i].image + '">\
 						<div class="' + dataToggleName + ' panel-collapse collapse">\
 					        <hr>\
 					        <a data-toggle="collapse" data-parent=".panel-custom" href=".' + dataToggleName + '">\
@@ -53,7 +53,7 @@ Handlebars.registerHelper( 'servicesList', function(servicesObject, options) {
 							<span class="glyphicon glyphicon-info-sign"></span>\
 						</div>\
 					</a>\
-				</div>';
+				</div></div>';
 	}
 
 	return output;
@@ -68,7 +68,7 @@ Handlebars.registerHelper( 'promotionsList', function(promotionsObject, options)
 
 	for( var i=0, iLen=promotionsObject.length; i<iLen; i++ ) {
 		var dataToggleName = "collapsePromotions" + i;
-		output += '<div class="panel panel-custom">\
+		output += '<div class="col-xs-12 col-md-6"><div class="panel panel-custom">\
 					<div class="panel-heading">\
 						<div class="title text-center">' + promotionsObject[i].title + '</div>\
 					</div>\
@@ -89,7 +89,7 @@ Handlebars.registerHelper( 'promotionsList', function(promotionsObject, options)
 							<span class="glyphicon glyphicon-info-sign"></span>\
 						</div>\
 					</a>\
-				</div>';
+				</div></div>';
 	}
 
 	return output;
@@ -104,7 +104,7 @@ Handlebars.registerHelper( 'eventsList', function(eventsObject, options) {
 
 	for( var i=0, iLen=eventsObject.length; i<iLen; i++ ) {
 		var dataToggleName = "collapseEvents" + i;
-		output += '<div class="panel panel-custom">\
+		output += '<div class="col-xs-12 col-md-6"><div class="panel panel-custom">\
 					<div class="panel-heading">\
 						<div class="title text-center">' + eventsObject[i].title + '</div>\
 					</div>\
@@ -125,7 +125,7 @@ Handlebars.registerHelper( 'eventsList', function(eventsObject, options) {
 							<span class="glyphicon glyphicon-info-sign"></span>\
 						</div>\
 					</a>\
-				</div>';
+				</div></div>';
 	}
 
 	return output;
@@ -142,7 +142,7 @@ Handlebars.registerHelper( 'hallOfFameList', function(hallOfFameObject, options)
 		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + hallOfFameObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
 
 		for( var j=0, jLen=hallOfFameObject[i].items.length; j<jLen; j++ ) {
-			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + hallOfFameObject[i].items[j].image + '" data-lightbox="gallery' + hallOfFameObject[i].year + '" data-title="<h3>' + hallOfFameObject[i].items[j].descriptionTitle + '</h3><hr>'+ hallOfFameObject[i].items[j].description +'">\
+			yearHtml += '<a class="galleryThumbnail col-xs-4 col-md-3" href="' + hallOfFameObject[i].items[j].image + '" data-lightbox="gallery' + hallOfFameObject[i].year + '" data-title="<h3>' + hallOfFameObject[i].items[j].descriptionTitle + '</h3><hr>'+ hallOfFameObject[i].items[j].description +'">\
 							<img class="photo" src="' + hallOfFameObject[i].items[j].image + '">\
 						</a>';
 		}
@@ -166,7 +166,7 @@ Handlebars.registerHelper( 'galleryList', function(galleryObject, options) {
 		var yearHtml = '<div class="yearPanel clearfix"><h1 class="text-center">' + galleryObject[i].year + '</h1><div class="panel"><div class="panel-body thumbnails">';
 
 		for( var j=0, jLen=galleryObject[i].items.length; j<jLen; j++ ) {
-			yearHtml += '<a class="galleryThumbnail col-xs-4" href="' + galleryObject[i].items[j].image + '" data-lightbox="gallery' + galleryObject[i].year + '" data-title="<h3>' + galleryObject[i].items[j].date + '</h3><hr>'+ galleryObject[i].items[j].description +'">\
+			yearHtml += '<a class="galleryThumbnail col-xs-4 col-md-3" href="' + galleryObject[i].items[j].image + '" data-lightbox="gallery' + galleryObject[i].year + '" data-title="<h3>' + galleryObject[i].items[j].date + '</h3><hr>'+ galleryObject[i].items[j].description +'">\
 							<img class="photo" src="' + galleryObject[i].items[j].image + '">\
 						</a>';
 		}
@@ -194,8 +194,8 @@ Handlebars.registerHelper( 'contactDetails', function(contactsObject, options) {
 	contact 		= "<div>" + contact + "</div>";
 
 
-	var output 	= '<div class="contactDetails top col-xs-12 col-md-4 col-md-offset-1">\
-						<div class="address top">\
+	var output 	= '<div class="contactDetails col-xs-12 col-md-4 col-md-offset-1">\
+						<div class="address">\
 							<div class="title">Address</div>\
 							<div class="description top">' + address + '</div>\
 						</div>\

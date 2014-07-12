@@ -11,7 +11,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'products-balls-view',
+    className 		: 'container products-balls-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

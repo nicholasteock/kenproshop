@@ -11,7 +11,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'gallery-view',
+    className 		: 'container gallery-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender

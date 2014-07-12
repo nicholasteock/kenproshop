@@ -12,7 +12,7 @@ var getRenderData = function() {
 };
 
 module.exports = View.extend({
-    className 		: 'promotions-view',
+    className 		: 'container promotions-view',
     template 		: template,
     getRenderData 	: getRenderData,
     afterRender 	: afterRender
