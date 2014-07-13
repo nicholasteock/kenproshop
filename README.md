@@ -19,10 +19,10 @@ Phase 2 (Desktop prepared)
 TODO                |   Done?
 -----------------------------------------
 1) About Us         |   *
-2) Products-Balls   |   
-2) Products-Bags    |   
-2) Products-Shoes   |   
-2) Products-Acce    |   
+2) Products-Balls   |   *
+2) Products-Bags    |   *
+2) Products-Shoes   |   *
+2) Products-Acce    |   *
 3) Services         |   *
 4) Promotions       |   *
 5) Events           |	*
