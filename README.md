@@ -36,16 +36,16 @@ Contact Us       |   Y		|
 
 TODO             |   Done?	|
 :----------------|:--------:|
-About Us         |   Y		|
-Products-Balls   |   Y		|
-Products-Bags    |   Y		|
-Products-Shoes   |   Y		|
+About Us         |   		|
+Products-Balls   |   		|
+Products-Bags    |   		|
+Products-Shoes   |   		|
 Products-Acce    |   		|
-Services         |   Y		|
-Promotions       |   Y		|
-Events           |   Y		|
-Hall of fame     |   Y		|
-Photo Gallery    |   Y		|
-Contact Us       |   Y		|
+Services         |   		|
+Promotions       |   		|
+Events           |   		|
+Hall of fame     |   		|
+Photo Gallery    |   		|
+Contact Us       |   		|
 
 
