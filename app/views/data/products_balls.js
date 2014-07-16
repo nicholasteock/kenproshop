@@ -46,11 +46,11 @@ module.exports = {
             "brandImage"        : "img/brands/ebonite.jpg",
             "items"             : [
                 {
-                    "image"         : "img/balls/Pivotpoint.jpg",
+                    "image"         : "img/balls/pivotpoint.jpg",
                     "description"   : "Pivot Point"
                 },
                 {
-                    "image"         : "img/balls/pivot.jpg",
+                    "image"         : "img/balls/Pivot.jpg",
                     "description"   : "Pivot"
                 },
                 {
